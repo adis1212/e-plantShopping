@@ -1,0 +1,51 @@
+.shop-page { min-height: 100vh; background: #f7f7f0; color: #23392d; }
+.shop-nav { height: 78px; padding: 0 max(28px, calc((100% - 1220px) / 2)); display: flex; align-items: center; gap: 42px; background: #fff; border-bottom: 1px solid #e8ebe3; }
+.shop-brand { display: inline-flex; align-items: center; gap: 9px; color: #254533; font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; text-decoration: none; }
+.shop-brand-icon { color: #729263; font-size: 1.6rem; }
+.plants-link { color: #597362; font-size: .92rem; font-weight: 600; text-decoration: none; }
+.plants-link:hover { color: #244931; }
+.nav-cart { margin-left: auto; display: inline-flex; align-items: center; gap: 9px; padding: 10px 0 10px 12px; border: 0; background: transparent; color: #294a37; font: inherit; font-weight: 600; cursor: pointer; }
+.cart-icon { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.cart-count { display: grid; min-width: 23px; height: 23px; padding: 0 5px; place-items: center; border-radius: 999px; background: #e7eddc; color: #2b5537; font-size: .75rem; }
+.shop-intro { padding: 70px 24px 64px; text-align: center; background: #e9efe1; }
+.shop-kicker { color: #66805f; font-size: .74rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.shop-intro h1 { margin: 13px 0 10px; color: #284633; font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4.3rem); font-weight: 500; letter-spacing: -.055em; line-height: 1.08; }
+.shop-intro h1 em { color: #729263; font-weight: 400; }
+.shop-intro > p:last-child { color: #68796b; }
+.catalog { width: min(1220px, calc(100% - 48px)); margin: 0 auto; padding: 52px 0 30px; }
+.plant-category { margin-bottom: 58px; scroll-margin-top: 20px; }
+.category-heading { display: flex; align-items: flex-start; gap: 17px; margin-bottom: 24px; }
+.category-number { padding-top: 4px; color: #829778; font-size: .78rem; font-weight: 700; letter-spacing: .1em; }
+.category-heading h2 { margin: 0; color: #294734; font-family: var(--font-display); font-size: 1.7rem; font-weight: 500; letter-spacing: -.025em; }
+.category-heading p { margin: 5px 0 0; color: #788579; font-size: .92rem; }
+.plant-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.plant-card { overflow: hidden; border: 1px solid #e8eae2; border-radius: 13px; background: #fff; box-shadow: 0 6px 20px rgba(34, 55, 39, .045); transition: transform .2s ease, box-shadow .2s ease; }
+.plant-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(34, 55, 39, .1); }
+.plant-image-wrap { height: 235px; position: relative; overflow: hidden; background: #e7ece2; }
+.plant-image-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.plant-card:hover .plant-image-wrap img { transform: scale(1.04); }
+.plant-tag { position: absolute; left: 14px; top: 14px; padding: 6px 10px; border-radius: 99px; background: rgba(255, 255, 250, .88); color: #526e50; font-size: .68rem; font-weight: 700; }
+.plant-details { padding: 18px 18px 17px; }
+.plant-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.plant-title-row h3 { margin: 0; color: #2b4534; font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
+.plant-price { color: #52714c; font-weight: 700; white-space: nowrap; }
+.plant-details > p { min-height: 44px; margin: 8px 0 16px; color: #788279; font-size: .86rem; line-height: 1.55; }
+.add-button { width: 100%; min-height: 42px; border: 1px solid #466a4b; border-radius: 7px; background: #355a3e; color: #fff; font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer; transition: background .18s ease, border-color .18s ease; }
+.add-button:hover:not(:disabled) { border-color: #24442e; background: #24442e; }
+.add-button:disabled { border-color: #dce5d6; background: #edf2e9; color: #57754f; cursor: default; }
+.shop-footer { padding: 28px 20px; border-top: 1px solid #e5e9df; color: #738172; text-align: center; font-size: .84rem; }
+.shop-footer span { margin-left: 5px; color: #7d996d; }
+
+@media (max-width: 850px) { .plant-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .plant-image-wrap { height: 220px; } }
+@media (max-width: 560px) {
+  .shop-nav { height: 68px; gap: 20px; padding: 0 18px; }
+  .shop-brand { font-size: 1rem; }
+  .nav-cart { gap: 6px; }
+  .plants-link { font-size: .85rem; }
+  .shop-intro { padding: 50px 18px 44px; }
+  .catalog { width: calc(100% - 32px); padding-top: 38px; }
+  .plant-grid { grid-template-columns: 1fr; gap: 15px; }
+  .plant-image-wrap { height: 245px; }
+  .plant-category { margin-bottom: 42px; }
+  .category-heading h2 { font-size: 1.45rem; }
+}
